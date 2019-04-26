@@ -1,0 +1,18 @@
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.form-style {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  label {
+      margin:10px 0px;
+  }
+  #submit {
+    width: 76px;
+    margin: 10px 0px;
+    align-self: center;
+  }
+
+}
