@@ -5,7 +5,8 @@ class PuppiesController < ApplicationController
   end
 
   def create
-    puts puppy_params
+    new_puppy = Puppies.new(puppy_params)
+    redirect_to puppies_path
   end
 
   def show
@@ -14,7 +15,8 @@ class PuppiesController < ApplicationController
 
   private
   def puppy_params
-    params.permit(:name, :age, :uploaded_image)
+    params.permit(:name, :age, :uploaded_image) 
+    # params.permit is removing all of the junk around the params such as authenticity token
   end 
 
 
