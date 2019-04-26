@@ -5,7 +5,8 @@ class PuppiesController < ApplicationController
   end
 
   def create
-    new_puppy = Puppies.new(puppy_params)
+    new_puppy = Puppy.new(puppy_params)
+    new_puppy.save
     redirect_to puppies_path
   end
 

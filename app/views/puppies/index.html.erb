@@ -1,6 +1,23 @@
 <h1>Puppy management system</h1>
 <h3>puppy list</h3>
 
+
+ <% @puppies.each do |puppy|%>
+<ul>
+    <li>
+      Name:<%= puppy.name%>
+    </li>
+    <li>
+      Age:<%= puppy.age%>
+    </li>
+    <li>
+    <%= link_to 'Show Pup', puppy_path(puppy.id)%>
+    </li>
+</ul>
+  <%end%>
+
+
+
 <form action="<%= puppies_path %>" method="POST" enctype="multipart/form-data" >
     <input type="hidden" value="<%= form_authenticity_token %>" name="authenticity_token" />
     <label>Name</label>

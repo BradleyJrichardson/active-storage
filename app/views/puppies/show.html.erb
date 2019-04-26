@@ -1,3 +1,5 @@
+<h3>My name is <%= @puppy.name %> and I am <%= @puppy.age %> years old</h3>
+
 <% if @puppy.uploaded_image.attached? %>
   <%= image_tag @puppy.uploaded_image, class: 'image-size' %>
 <% else %>
